@@ -1,10 +1,11 @@
 import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+// import type { AppProps } from 'next/app';
 
-// eslint-disable-next-line arrow-body-style
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />;
+import type { AppPropsWithLayout } from '@/lib/next/types';
+
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(<Component {...pageProps} />);
 };
 
 export default MyApp;
