@@ -1,4 +1,5 @@
 FROM node:18-bullseye-slim as node
+ENV YARN_VERSION=1.22.19
 RUN npm uninstall --global yarn && \
     corepack disable && \
     corepack enable yarn && \
@@ -6,7 +7,8 @@ RUN npm uninstall --global yarn && \
 COPY --chown=node:node . /app
 USER node
 WORKDIR /app
-ENV YARN_VERSION=1.22.19
+RUN find -type f -regextype sed -regex ".*\.\(test\|spec\|stories\)\.\(ts\|tsx\)" -delete && \
+    find -type f -regextype sed -regex ".*\.snap" -delete
 RUN yarn install --ignore-scripts && \
     yarn build && \
     yarn install --production --ignore-scripts && \
