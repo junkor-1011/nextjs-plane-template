@@ -1,5 +1,5 @@
 import React from 'react';
-import useDateNow from '@/hooks/useDateNow';
+import useDateNow from '@/hooks/utils/useDateNow';
 
 export type ClockProps = React.ComponentPropsWithRef<'span'> & {
   useLocale?: boolean;
