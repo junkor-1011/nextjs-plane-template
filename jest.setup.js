@@ -5,6 +5,9 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 
+jest.useFakeTimers();
+jest.setSystemTime(1600000000000);
+
 module.exports = async () => {
   process.env.TZ = 'Asia/Tokyo';
 };
