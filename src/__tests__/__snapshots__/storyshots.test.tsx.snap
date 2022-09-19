@@ -549,3 +549,21 @@ exports[`Storyshots components/atoms/clock With Style 1`] = `
   2020/9/13 21:26:40
 </span>
 `;
+
+exports[`Storyshots msw-test/axios/fetch-ipv4 Failure Behavier 1`] = `
+<div>
+  loading...
+</div>
+`;
+
+exports[`Storyshots msw-test/axios/fetch-ipv4 Loading 1`] = `
+<div>
+  loading...
+</div>
+`;
+
+exports[`Storyshots msw-test/axios/fetch-ipv4 Success Behavier 1`] = `
+<div>
+  loading...
+</div>
+`;
