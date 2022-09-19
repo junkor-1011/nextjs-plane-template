@@ -529,3 +529,23 @@ exports[`Storyshots Pages/Home Home Page 1`] = `
   </footer>
 </div>
 `;
+
+exports[`Storyshots components/atoms/clock ISO Format UTC 1`] = `
+<span>
+  2020-09-13T12:26:40.000Z
+</span>
+`;
+
+exports[`Storyshots components/atoms/clock Locale 1`] = `
+<span>
+  2020/9/13 21:26:40
+</span>
+`;
+
+exports[`Storyshots components/atoms/clock With Style 1`] = `
+<span
+  style="color: green; font-weight: bold;"
+>
+  2020/9/13 21:26:40
+</span>
+`;
