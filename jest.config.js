@@ -14,6 +14,7 @@ const customJestConfig = {
       tsconfig: '<rootDir>/tsconfig.json',
     },
   },
+  globalSetup: './jest.global-setup.js',
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'mdx'],
   moduleNameMapper: {
     '^@/(.+)': '<rootDir>/src/$1',
