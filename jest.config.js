@@ -27,6 +27,8 @@ const customJestConfig = {
     // '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
     // https://jestjs.io/docs/webpack#handling-static-assets
     '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
+
+    '^axios$': require.resolve('axios'),
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   testEnvironment: 'jest-environment-jsdom',
